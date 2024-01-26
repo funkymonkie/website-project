@@ -1,0 +1,64 @@
+/* style.css */
+
+/* Define colours*/
+
+.gold { color: gold; }
+.silver { color: silver; }
+.bronze { color: #cd7f32; }
+
+
+/* Apply colors to the first, second, and third dd elements following each dt in the same dl */
+dt + dd { color: gold; }
+dt + dd + dd { color: silver; }
+dt + dd + dd + dd { color: #cd7f32; }
+
+
+/* define classes */
+.underline{
+    text-decoration: underline;
+}
+
+
+
+
+
+/* Define Selectors */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D2D8B3;
+ }
+
+h1{
+    color: #815355;
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-decoration: underline;
+    ;
+}
+p {
+    color: #470063;
+    font-size: 18px;
+}
+dl {
+    column-count: 3;
+    column-gap: 20px; /* Adjust the gap between columns */
+}
+
+/* Add some padding and margin for better spacing */
+dl, dt, dd {
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: #D2D8B3;
+    height: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
