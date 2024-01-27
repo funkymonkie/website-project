@@ -1,16 +1,11 @@
 /* style.css */
 
-/* Define colours*/
-
-.gold { color: gold; }
-.silver { color: silver; }
-.bronze { color: #cd7f32; }
 
 
 /* Apply colors to the first, second, and third dd elements following each dt in the same dl */
 dt + dd { color: gold; }
 dt + dd + dd { color: silver; }
-dt + dd + dd + dd { color: #cd7f32; }
+dt + dd + dd + dd { color: #7c5025; }
 
 
 /* define classes */
@@ -18,8 +13,47 @@ dt + dd + dd + dd { color: #cd7f32; }
     text-decoration: underline;
 }
 
+.my-favorites-section dl{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 10px;
+    align-items: baseline;
+    justify-content: space-between;
+    background-color: rgb(168, 126, 126);
+}
+
+.favorites-container {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+
+.category {
+            flex: 1;
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: rgb(11, 11, 11); 
+            border: 5px solid #321642;
+            flex-wrap: nowrap;
+        }
+
+.sections {
+            flex: 1;
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: rgb(143, 126, 168); 
+            border: 5px solid #321642;
+            flex-wrap: nowrap;
+        }
+        
+.title {
+            font-weight: bold;
+            color: #DA627D;
+        }
 
 
+
+/*---------------------------------------------------------------------*/
 
 
 /* Define Selectors */
@@ -27,10 +61,13 @@ dt + dd + dd + dd { color: #cd7f32; }
 body {
     font-family: Arial, sans-serif;
     background-color: #D2D8B3;
+    margin: calc(80px - 1.5vw);
  }
 
 h1{
-    color: #815355;
+    color: #DA627D;
+    font-size: calc(1.5vw + 12px);
+   /* text-decoration: underline;  */
 }
 h2{
     text-align: center;
@@ -41,24 +78,48 @@ h3{
 }
 p {
     color: #470063;
-    font-size: 18px;
+    font-size:  calc(1.5vw + 16px);
 }
 dl {
-    column-count: 3;
+    column-count: 2;
     column-gap: 20px; /* Adjust the gap between columns */
 }
 
 /* Add some padding and margin for better spacing */
 dl, dt, dd {
-    margin: 0;
-    padding: 0;
+    margin: 10;
+    padding: 10;
 }
 
-nav{
+section {
     background-color: #D2D8B3;
-    height: 1000px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    text-align: center; 
     gap: 50px;
+}
+
+
+/*---------------------------------------------------------------------*/
+
+
+/* Adjustements for smaller screens */
+
+@media screen and (max-width: 605px) {
+    body {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: calc(0.25vw + 16px);
+    }
+
+    p {
+        font-size: calc(0.25vw + 12px);
+    }
+
+    h1, h2, h3 {
+        margin-bottom: 10px;
+    }
 }
