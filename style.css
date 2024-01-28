@@ -1,16 +1,24 @@
-/* style.css */
 
 
 
-/* Apply colors to the first, second, and third dd elements following each dt in the same dl */
-dt + dd { color: gold; }
-dt + dd + dd { color: silver; }
-dt + dd + dd + dd { color: #7c5025; }
+/*___---style.css---___ */
+
+
+
+/*---------------------------------------------------------------------*/
+
 
 
 /* define classes */
+/*----------------*/
+
+
 .underline{
     text-decoration: underline;
+}
+
+.text-shadow{
+    text-shadow: 2px 2px 4px #321642
 }
 
 .my-favorites-section dl{
@@ -22,19 +30,23 @@ dt + dd + dd + dd { color: #7c5025; }
     background-color: rgb(168, 126, 126);
 }
 
-.favorites-container {
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: center;
-        }
+.intro{ 
+            flex: 1;
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: rgb(81, 56, 194); 
+            border: 15px solid #321642;
+            
 
+}
 .category {
             flex: 1;
             box-sizing: border-box;
             padding: 10px;
             background-color: rgb(11, 11, 11); 
             border: 5px solid #321642;
-            flex-wrap: nowrap;
+
+            font-size: calc(0.5vw + 5px);
         }
 
 .sections {
@@ -43,7 +55,7 @@ dt + dd + dd + dd { color: #7c5025; }
             padding: 10px;
             background-color: rgb(143, 126, 168); 
             border: 5px solid #321642;
-            flex-wrap: nowrap;
+            
         }
         
 .title {
@@ -53,46 +65,30 @@ dt + dd + dd + dd { color: #7c5025; }
 
 
 
+
+
+
 /*---------------------------------------------------------------------*/
 
 
+
 /* Define Selectors */
+/*------------------*/
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #D2D8B3;
+    font-family: Helvetica, sans-serif;
+    background-color: #000000;
     margin: calc(80px - 1.5vw);
- }
-
-h1{
-    color: #DA627D;
-    font-size: calc(1.5vw + 12px);
-   /* text-decoration: underline;  */
 }
-h2{
+
+div {
+    break-inside: avoid; /* soloution to keep the 3 values with their title */
+    justify-content: space-evenly;
+    align-items: center;
     text-align: center;
-}
-h3{
-    text-decoration: underline;
-    ;
-}
-p {
-    color: #470063;
-    font-size:  calc(1.5vw + 16px);
-}
-dl {
-    column-count: 2;
-    column-gap: 20px; /* Adjust the gap between columns */
-}
-
-/* Add some padding and margin for better spacing */
-dl, dt, dd {
-    margin: 10;
-    padding: 10;
 }
 
 section {
-    background-color: #D2D8B3;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -100,26 +96,115 @@ section {
     gap: 50px;
 }
 
+h1{
+    color: #DA627D;
+    font-size: calc(1.5vw + 25px);
+    text-shadow: 2px 2px 4px #321642
+   /* text-decoration: underline;  */
+}
+
+h2{
+    text-align: center;
+    text-shadow: 2px 2px 4px #321642;
+    font-size: calc(1.5vw + 16px);
+}
+
+h3{
+    text-decoration: underline;
+    font-size: calc(1.5vw +5px);
+}
+
+p {
+    color: #000000;
+    font-size:  calc(1.5vw + 5px);
+}
+
+dl {
+    column-count: 3;
+    column-gap: 5px; /* Adjust the gap between columns */
+    line-height: 1;
+    margin-bottom: 10px;
+    margin-inline-start: 0%;
+    margin-inline-end: 0%;
+}
+
+dt{
+    margin-inline-start: 0%;
+    margin-inline-end: 0%;
+}
+
+dd{ 
+    font-size: calc(1.5vw +5px);
+    margin-inline-start: 0%;
+    margin-inline-end: 0%;
+}
+
+/* Apply colors to the first, second, and third dd elements following each dt in the same dl */
+
+dt + dd { color: gold; }
+dt + dd + dd { color: silver; }
+dt + dd + dd + dd { color: #7c5025; }
+
+
+
+
+
 
 /*---------------------------------------------------------------------*/
 
 
+
 /* Adjustements for smaller screens */
+/*----------------------------------*/
+
 
 @media screen and (max-width: 605px) {
     body {
         padding: 5px;
+        margin: calc(20px - 1.5vw);
     }
 
-    h1 {
-        font-size: calc(0.25vw + 16px);
-    }
+    h1 {font-size: calc((1.5vw + 25px);}
 
-    p {
-        font-size: calc(0.25vw + 12px);
-    }
+    h2 {font-size: calc(1.5vw + 16px)}
+
+    h3 {font-size: calc(1.5vw +5px)}
+
+    dd{font-size: calc(1.5vw + 5px);}
+
+
+    p {font-size: calc(1.5vw + 5px)}
 
     h1, h2, h3 {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 }
+
+
+
+
+
+
+/*---------------------------------------------------------------------*/
+
+
+
+/* set image to a percenatge of screen width + keep proportions */
+/*--------------------------------------------------------------*/
+
+
+
+
+img {
+    width: 60%; /* Make all images fill their container width */
+    height: auto; /* Maintain the images' aspect ratio */
+}
+
+
+
+
+
+
+/*---------------------------------------------------------------------*/
+
+
