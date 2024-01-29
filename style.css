@@ -79,6 +79,7 @@ body {
     font-family: Helvetica, sans-serif;
     background: url('images/purple_moving_tunnel.gif');
     margin: calc(80px - 1.5vw);
+    padding: 50px;
 }
 
 div {
@@ -186,6 +187,15 @@ dt + dd + dd + dd { color: #7c5025; }
     h1, h2, h3 {
         margin-bottom: 5px;
     }
+
+    .image_adjust {
+    overflow: hidden;
+    width: 80vw; /* Make all images fill their container width */
+    height :auto; /* Maintain the images' aspect ratio */
+    max-width: 100%; 
+    /*border: 10px solid #321642;*/
+}
+
 }
 
 
@@ -203,9 +213,11 @@ dt + dd + dd + dd { color: #7c5025; }
 
 
 
-img {
-    width: 60%; /* Make all images fill their container width */
-    height: auto; /* Maintain the images' aspect ratio */
+.image_adjust {
+    overflow: hidden;
+    width: 60vw; /* Make all images fill their container width */
+    height :auto; /* Maintain the images' aspect ratio */
+    max-width: 100%;
     border: 10px solid #321642;
 }
 
